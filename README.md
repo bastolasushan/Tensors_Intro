@@ -25,21 +25,25 @@ In , numpy a float32 or float64 number is a scalar tensor ( or scalar array).
 You can display the number of axes of a Numpy tensor vis the ndim attribute 
 a scalar tensor has 0 axes (ndim == 0) { ndim is basically a syntax which is number of dimensional in python}
 
+```python
 import  numpy as np
 x = np.array(12)
 x
 >> array(12)     #Output
 x.ndim
 >> 0  # indicating as 0th dimension
+```
 
 # Vectors (1D tensors)
 An array of numbers is called a vector, or 1D tensor. A 1D tensor is said to have exactly one axis. Following is a Numpy vector
 
+```Python
 x = np.array([12,3,6,14])
 x
 >> array ([12,3,6,14])
 x.ndim
 >> 1  # 1th dimension tensor
+```
 
 
 This vector has five entries and so is called a 5 dimensional vector. Don't confuse a 5D vector with a 5D tensor! A 5D vector has only one axis and has five dimensions along its axis, whereas a 5D tensor has five axes ( and may have any number of dimensions along each axis). Dimensionally can denote either the number of entries along a specific axis (as in the case of our 5D vector) or the number of axes in a tensor (such as 5D tensor), which can be confusing at times. In the latter case, it's tecnically more correct to talk about a tensor of rank 5 ( the rank of a tensor being the number of axes). but the ambiguous notation 5D tensor is common regardless
@@ -48,18 +52,22 @@ This vector has five entries and so is called a 5 dimensional vector. Don't conf
 
 An array of vectors is a matrix, or 2D tensor. A matrix has two axes (often referred to rows and columns). You can visually interpret a matrix as a rectangular grid of numbers. This is a Numpy matrix:
 
+```Python
 x= np.array ([5, 78, 2, 42, 1],
-						 [6, 23, 4, 12, 4],
-						 [3, 23, 42, 12, 5])
+	     [6, 23, 4, 12, 4],
+	     [3, 23, 42, 12, 5])
 x.dim
 
 >> 2 
+```
 
 
 # 3D tensors and higher dimensional tensors
 
 If you pack such matrices in a new array , you obtain a 3D tensor, which you can visually interpret as a cube of numbers. 
 Following is a Numpy 3D tensor:
+
+```Python
 
 x = np.array([ [[5, 12, 23, 24, 1],
                 [5, 12, 23, 24, 1],
@@ -75,7 +83,7 @@ x = np.array([ [[5, 12, 23, 24, 1],
                  
 x.ndim     
 >> 3 # It is indicating as 3 dimensional array
-
+```
 
 
 A tensor is defined by three key attribute
@@ -86,7 +94,7 @@ A tensor is defined by three key attribute
 
 So visualizing it in code:
 ----------------------------------
-
+```Python
 from keras.datasets import mnist
 
 (train_images, train_labels), (test_images, test_labels) = mnist.load_data()
@@ -103,7 +111,7 @@ print(train_images.shape)
 
 print(train_images.dtype)
 >> unit8 # it's 8-bit integers
-
+```
 
 In short is is a 3D tensor of 8-bit integers. More precisely , it's an array of 60,000 matrices of 28*28 integers. Each such matrix is a grayscale image, with coefficients between 0 and 255.
 
