@@ -18,12 +18,8 @@ If you don't know what matrices is :
      
      
      
-# Scalars( 0 D tensors)
-     
-     A tensor that contains only one number is called a scalar ( or scalar tensor , or 0-dimensional tensor, 0D )  
-In , numpy a float32 or float64 number is a scalar tensor ( or scalar array).
-You can display the number of axes of a Numpy tensor vis the ndim attribute 
-a scalar tensor has 0 axes (ndim == 0) { ndim is basically a syntax which is number of dimensional in python}
+# Scalars( 0-Dimension tensors)
+A tensor that contains only one number is called a scalar ( or scalar tensor , or 0-dimensional tensor, 0D ). In , numpy a float32 or float64 number is a scalar tensor ( or scalar array). You can display the number of axes of a Numpy tensor vis the ndim attribute a scalar tensor has 0 axes (ndim == 0) { ndim is basically a syntax which is number of dimensional in python}
 
 ```python
 import  numpy as np
